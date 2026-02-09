@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traysx site</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Google Login Button -->
+    <div class="login-section">
+        <button onclick="googleLogin()">Login with Google</button>
+    </div>
+
+    <!-- User Info & Social Icons -->
+    <div class="user-info">
+        <h2 id="user-name">user-name</h2>
+        <div class="social-icons">
+            <a href="#" target="_blank">Facebook</a> |
+            <a href="#" target="_blank">Twitter</a>
+        </div>
+    </div>
+
+    <!-- Image Gallery Slider -->
+    <div class="gallery">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <img id="gallery-image" src="image1.png" alt="Gallery Image" width="300">
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        // Dummy Google login function
+        function googleLogin() {
+            document.getElementById('user-name').innerText = 'Logged in User';
+        }
+
+        // Simple image slider
+        let currentImage = 1;
+        const totalImages = 3; // Suppose we have 3 images
+
+        function changeSlide(direction) {
+            currentImage += direction;
+            if (currentImage < 1) currentImage = totalImages;
+            if (currentImage > totalImages) currentImage = 1;
+            document.getElementById('gallery-image').src = `image${currentImage}.png`;
+        }
+    </script>
+
+</body>
+</html>

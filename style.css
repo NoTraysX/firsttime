@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f3f3f3;
+}
+
+.login-section {
+    margin: 20px;
+}
+
+.user-info {
+    margin: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.gallery {
+    margin: 20px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 5px;
+}
